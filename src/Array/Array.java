@@ -7,7 +7,7 @@ public class Array {
 
         nums[0] = nums[nums.length - 1];
         nums[nums.length - 1] = temp;
-        int sum = nums[0] + nums[2];
+        int sum = nums[0] + nums[nums.length / 2];
         System.out.println(sum);
     }
 }
