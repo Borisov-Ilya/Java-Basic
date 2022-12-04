@@ -4,6 +4,13 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/**
+ * Написать программу, которая будет выполнять следующие действия:
+ * 1. Ввести три числа с клавиатуры x, y, z
+ * 2. Найти и вывести в консоль среднее арифметическое этих чисел
+ * 3. Разделить среднее арифметическое на 2 и округлить в меньшую сторону
+ * 4. Если полученное число больше 3, то вывести на экран сообщение "Программа выполнена корректно"
+ */
 public class Task4 {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
