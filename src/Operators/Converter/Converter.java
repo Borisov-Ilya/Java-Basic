@@ -25,18 +25,42 @@ public class Converter {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
+        int physicalQuantities;
+        int unit;
+        double number;
         System.out.println("Выберите что переводить:\n1-масса\n2-расстояние");
-        int physicalQuantities = Integer.parseInt(reader.readLine());
+        while (true) {
+            try {
+                physicalQuantities = Integer.parseInt(reader.readLine());
+                break;
+            } catch (NumberFormatException e) {
+                System.out.println("Вы ввели что-то другое. Попробуйте еще раз ввести число: ");
+            }
+        }
 
         if (physicalQuantities == 1) {
             System.out.println("Выберите единицу измерения:\n1-кг\n2-грамм\n3-фунт\n4-карат");
         } else {
             System.out.println("Выберите единицу измерения:\n1-метр\n2-миля\n3-ярд\n4-фут");
         }
-        int unit = Integer.parseInt(reader.readLine());
+        while (true) {
+            try {
+                unit = Integer.parseInt(reader.readLine());
+                break;
+            } catch (NumberFormatException e) {
+                System.out.println("Вы ввели что-то другое. Попробуйте еще раз ввести число: ");
+            }
+        }
 
         System.out.println("Введите число: ");
-        double number = Double.parseDouble(reader.readLine());
+        while (true) {
+            try {
+                number = Integer.parseInt(reader.readLine());
+                break;
+            } catch (NumberFormatException e) {
+                System.out.println("Вы ввели что-то другое. Попробуйте еще раз ввести число: ");
+            }
+        }
 
         if (physicalQuantities == 1) {
             double kilogram = 0;
