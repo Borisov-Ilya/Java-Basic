@@ -25,24 +25,28 @@ public class Task2 {
         System.out.println("Ввод: " + str);
         String[] splitStr = str.split("");
 
-        if (splitStr[0].equals("x")) {
-            if (splitStr[1].equals("+")) {
-                System.out.println("Вывод: " + (Integer.parseInt(splitStr[4]) - Integer.parseInt(splitStr[2])));
-            } else if (splitStr[1].equals("-")) {
-                System.out.println("Вывод: " + (Integer.parseInt(splitStr[4]) + Integer.parseInt(splitStr[2])));
+        if (splitStr.length == 5) {
+            if (splitStr[0].equals("x")) {
+                if (splitStr[1].equals("+")) {
+                    System.out.println("Вывод: " + (Integer.parseInt(splitStr[4]) - Integer.parseInt(splitStr[2])));
+                } else if (splitStr[1].equals("-")) {
+                    System.out.println("Вывод: " + (Integer.parseInt(splitStr[4]) + Integer.parseInt(splitStr[2])));
+                }
+            } else if (splitStr[2].equals("x")) {
+                if (splitStr[1].equals("+")) {
+                    System.out.println("Вывод: " + (Integer.parseInt(splitStr[4]) - Integer.parseInt(splitStr[0])));
+                } else if (splitStr[1].equals("-")) {
+                    System.out.println("Вывод: " + (-Integer.parseInt(splitStr[4]) + Integer.parseInt(splitStr[0])));
+                }
+            } else if (splitStr[4].equals("x")) {
+                if (splitStr[1].equals("+")) {
+                    System.out.println("Вывод: " + (Integer.parseInt(splitStr[0]) + Integer.parseInt(splitStr[2])));
+                } else if (splitStr[1].equals("-")) {
+                    System.out.println("Вывод: " + (Integer.parseInt(splitStr[0]) - Integer.parseInt(splitStr[2])));
+                }
             }
-        } else if (splitStr[2].equals("x")) {
-            if (splitStr[1].equals("+")) {
-                System.out.println("Вывод: " + (Integer.parseInt(splitStr[4]) - Integer.parseInt(splitStr[0])));
-            } else if (splitStr[1].equals("-")) {
-                System.out.println("Вывод: " + (-Integer.parseInt(splitStr[4]) + Integer.parseInt(splitStr[0])));
-            }
-        } else if (splitStr[4].equals("x")) {
-            if (splitStr[1].equals("+")) {
-                System.out.println("Вывод: " + (Integer.parseInt(splitStr[0]) + Integer.parseInt(splitStr[2])));
-            } else if (splitStr[1].equals("-")) {
-                System.out.println("Вывод: " + (Integer.parseInt(splitStr[0]) - Integer.parseInt(splitStr[2])));
-            }
+        } else {
+            System.out.println("Строка не соответствует формату");
         }
     }
 }
