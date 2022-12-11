@@ -27,7 +27,7 @@ public class Task4 {
         boolean prompt = true;
 
         while (attempt < 3) {
-            System.out.print("Ответ: ");
+            System.out.print((attempt + 1) +  " попытка\nОтвет: ");
             String currentAnswer = reader.readLine();
 
             if (currentAnswer.equals("Подсказка")) {
